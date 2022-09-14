@@ -1,3 +1,5 @@
+----critica pinocho---
+
 “Pinocho” es una película sin alma
 
 Crítica de “Pinocho” (2022), mucho CGI intentando ser una película de verdad (Titulo h1)
@@ -16,6 +18,88 @@ La película original es muy famosa porque da bastante miedo en muchas de sus se
 
 
 Luis Servin
-
-
+---------- video pinocho-----
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kGWvxpJYyJQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+-------------botones-----------
+ html
+</button>
+  <button class="custom-btn btn-5"><span>Cine</span>
+</button>
+
+</button>
+  <button class="custom-btn btn-5"><span>Netflix</span>
+</button>
+</button>
+  <button class="custom-btn btn-5"><span>Disney</span>
+</button>
+</button>
+  <button class="custom-btn btn-5"><span>Otros</span>
+</button>
+
+css
+------------------------------------------
+body {
+  background: #ffff56;
+}
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #ffff56;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+.btn-5 {
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  background: rgb(255,75,2);
+background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
+}
+.btn-5:hover {
+  color: rgb(251,75,2);
+  background: transparent;
+   box-shadow:none;
+}
+.btn-5:before,
+.btn-5:after{
+  content:'';
+  position:absolute;
+  background: RGB(251, 75, 2);
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  box-shadow:
+   -1px -1px 5px 0px #fff,
+   7px 7px 20px 0px #0003,
+   4px 4px 5px 0px #0002;
+  transition:400ms ease all;
+}
+.btn-5:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.btn-5:hover:before,
+.btn-5:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+
+----------------------------------------------------------------------
