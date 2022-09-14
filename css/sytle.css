@@ -4,8 +4,14 @@
  font-size: 1rem;
 }
 
+a{
+    text-align: center;
+    text-decoration: none;
+}
+
 h1 {
     font-size: 3.5em;
+    text-align: center;
 }
 
 h2 {
@@ -14,6 +20,9 @@ h2 {
 
 h3 {
      font-size: 2em;
+}
+h6 {
+    font-size: 1em;
 }
 
 p {
@@ -33,4 +42,83 @@ body, header, main, footer {
 main{
     min-height: 100px;
 }
+#Novedades {
+border: 2px green solid;
+min-height: 50 px;
+margin: 0.5rem;
+}
+.Carta_Primera_Novedad{
+    border: 2px black solid;
+min-height: 50 px;
+margin: 0.5rem;
+}
+.Carta_Novedades{
+    border: 2px rgb(6, 30, 75) solid;
+    min-height: 50 px;
+    margin: 0.5rem;
+    text-align: center;
+}
 
+#Titulo_frase{
+    text-align: center;
+    padding: 10px 2px;
+}
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #ffff56;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow:inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+  .btn-5 {
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: rgb(255,75,2);
+  background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
+  }
+  .btn-5:hover {
+    color: rgb(251,75,2);
+    background: transparent;
+     box-shadow:none;
+  }
+  .btn-5:before,
+  .btn-5:after{
+    content:'';
+    position:absolute;
+    background: RGB(251, 75, 2);
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    box-shadow:
+     -1px -1px 5px 0px #fff,
+     7px 7px 20px 0px #0003,
+     4px 4px 5px 0px #0002;
+    transition:400ms ease all;
+  }
+  .btn-5:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .btn-5:hover:before,
+  .btn-5:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+  
