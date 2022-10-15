@@ -55,7 +55,7 @@
 
             </select>
             <br><br>
-        <input type="checkbox" name="terminos" id="">Acepto los terminos y Condiciones> <!--VER ID-->
+        <input type="checkbox" name="terminos">Acepto los terminos y Condiciones>
             
             <div>
                 <button class="custom-btn btn-5" onclick="validarEnviar()">Enviar</button>
@@ -100,7 +100,7 @@
                 document.fvalida.interes.focus()
                 return 0
             }
-            if (document.fvalida.terminos.unchecked) {
+            if (document.fvalida.terminos.checked == false) {
                 alert("Acepte Terminos y condiciones.")
                 document.fvalida.terminos.focus()
                 return 0
