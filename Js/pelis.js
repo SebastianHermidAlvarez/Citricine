@@ -31,12 +31,12 @@ btnAnteriorInferior.addEventListener('click', () => {
 		cargarPeliculas();
 	}
 });
-
+/*Se podria cambiar top_rated por una variable para que le permita al usuario  elegir otro tipo de listas de peliculas*/ 
 
 const cargarPeliculas = async() => {
 	try {
-		const respuesta = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=b7f9be5d7d8dea1d2870b3eda0c2cc8c&language=es-MX&page=${pagina}`);
-	
+		const respuesta = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=b7f9be5d7d8dea1d2870b3eda0c2cc8c&language=es-MX&page=${pagina}`);
+		/* La api es tomada  de  https://developers.themoviedb.org/ y la key es b7f9be5d7d8dea1d2870b3eda0c2cc8c */
 		console.log(respuesta);
 
 		if(respuesta.status === 200){
@@ -68,3 +68,4 @@ const cargarPeliculas = async() => {
 	}
 
 }
+cargarPeliculas();

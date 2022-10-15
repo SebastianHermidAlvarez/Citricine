@@ -1,24 +1,130 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Criticine</title>
-        <link rel="icon" type="ico/png" href="imagenes/icono3.jpg">
-        <link rel="stylesheet" href="css/sytle.css">
-    </head>
-    <body>
-        <header>
-            <div class="Contenedor">
-                <p id="Logo"><img src="imagenes/7312877.png" alt="Logo de limon"></p>
-                <nav class="Navegacion">
-                    <a href="index.html" class="custom-btn btn-5">Inicio</a>
-                    <a href="avances.html"class="custom-btn btn-5">Trailers</a>
-                    <a href="peticion.html"class="custom-btn btn-5">Deja tu critica</a>
-                    <a href="critica.html"class="custom-btn btn-5">Criticas</a>
-                </nav>
-            </div> 
-        </header>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CritiCine</title>
+    <link rel="icon" type="ico/png" href="imagenes/7312877.ico">
+    <link rel="stylesheet" href="css/sytle.css">
+</head>
+
+<body>
+    <header>
+        <div class="Contenedor">
+            <p id="Logo"><img src="imagenes/7312877.png" alt="Logo de limon"></p>
+            <nav class="Navegacion">
+                <a href="index.html" class="custom-btn btn-5">Inicio</a>
+                <a href="avances.html" class="custom-btn btn-5">Trailers</a>
+                <a href="peticion.html" class="custom-btn btn-5">Deja tu critica</a>
+                <a href="critica.html" class="custom-btn btn-5">Criticas</a>
+                <a href="Calificadas.html" class="custom-btn btn-5">Calificadas</a>
+
+            </nav>
+
+
+        </div>
+
+    </header>
+    <H1>Debe registrarse</H1>
+    <div class="formulario">
+        <form name="fvalida">
+            <label for="">Nombre: </label>
+            <input type="text" name="nombre">
+            <label for="">Apellido: </label>
+            <input type="text" name="apellido">
+            <br><br>
+            <label for="">Edad:</label>
+
+            <input type="text" name="edad" size="3" maxlength="2">
+            <h6>Tiene que ser mayor de 18 años</h6>
+            <br>
+            <label for="">Categorias Favoritas:</label>
+            <select name=interes>
+                <option value="Elegir">Todas
+                <option value="CienciaFiccion">Ciencia Ficcion
+                <option value="Drama">Drama
+                <option value="Comedia">Comedia
+                <option value="Infantil">Infantil
+                <option value="Terror">Terror
+                <option value="Accion">Accion
+                <option value="Documental">Documental
+                <option value="thriller">thriller
+                <option value="Otras">Otras
+
+            </select>
+            <br><br>
+        <input type="checkbox" name="terminos" id="">Acepto los terminos y Condiciones>
+            
+            <div>
+                <button class="custom-btn btn-5" onclick="validarEnviar()">Enviar</button>
+                <h1><br></h1>
+            </div>
+        </form>
+    </div>
+    <hr><br>
+
+    <script>
+
+
+        function validarEnviar() {
+
+            if (document.fvalida.nombre.value.length == 0) {
+                alert("Tiene que escribir su nombre")
+                document.fvalida.nombre.focus()
+                return 0
+            }
+            if (document.fvalida.apellido.value.length == 0) {
+                alert("Tiene que escribir su apellido")
+                document.fvalida.apellido.focus()
+                return 0
+            }
+            edad = document.fvalida.edad.value
+            edad = validarEntero(edad)
+            document.fvalida.edad.value = edad
+            if (edad == "") {
+                alert("Tiene que introducir un numero valido")
+                document.fvalida.edad.focus()
+                return 0
+            } else {
+                if (edad < 18) {
+                    alert("Su edad no cumple los requisitos")
+                    document.fvalida.edad.focus()
+                    return 0
+                }
+            }
+
+            if (document.fvalida.interes.selectedIndex == 0) {
+                alert("Elija Categoria favorita.")
+                document.fvalida.interes.focus()
+                return 0
+            }
+            if (document.fvalida.terminos.unchecked) {
+                alert("Acepte Terminos y condiciones.")
+                document.fvalida.terminos.focus()
+                return 0
+            }
+
+            alert("Muchas gracias, Ahora espere unos minutos a confirmar")
+            document.fvalida.submit()
+        }
+
+        function validarEntero(valor) {
+
+            valor = parseInt(valor)
+
+
+            if (isNaN(valor)) {
+
+                return ""
+            } else {
+
+                return valor
+            }
+        }
+    </script>
+</body>
+</body>
+
 </html>
