@@ -34,7 +34,10 @@
             <input type="text" name="nombre">
             <label for="">Apellido: </label>
             <input type="text" name="apellido">
-            <br><br>
+            <br> <br>
+            <label for="">E-mail:</label>
+            <input type="text" name="email">
+            <br> <br>
             <label for="">Edad:</label>
 
             <input type="text" name="edad" size="3" maxlength="2">
@@ -64,6 +67,7 @@
         </form>
     </div>
     <hr><br>
+            <!--Hay demasiados if deberia mejorar con un par de  OR ||, pero no veo como poner el focus independiente -->
 
     <script>
 
@@ -73,6 +77,12 @@
             if (document.fvalida.nombre.value.length == 0) {
                 alert("Tiene que escribir su nombre")
                 document.fvalida.nombre.focus()
+                return 0
+            }
+
+            if (document.fvalida.email.value.length == 0) {
+                alert("Ingrese un E-mail para ponerse en contacto")
+                document.fvalida.email.focus()
                 return 0
             }
             if (document.fvalida.apellido.value.length == 0) {
