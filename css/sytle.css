@@ -3,12 +3,14 @@
     padding: 0;
     font-size: 1rem;
     box-sizing: border-box;
+    
 }
 
 a {
     text-align: center;
     text-decoration: none;
 }
+
 
 h1 {
     font-size: 3.5em;
@@ -42,7 +44,7 @@ p {
 
 .content {
     width: 90%;
-    max-width: 1000px;
+    max-width: 1000px;/* 100% */
     margin: 40px auto 100px auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -85,6 +87,7 @@ header .contenedor {
 }
 
 body {
+    
     background: lightyellow;
     /* Fuentes para contenido */
     font-family: 'Acme', sans-serif;
@@ -108,7 +111,32 @@ footer {
 main {
     min-height: 100px;
 }
+@media  screen
+and (max-device-width: 580px)
+and (-webkit-min-device-pixel-ratio: 2) {
+/*  se podria hacer modificaciones aca
+.content .pelicula .poster {
+    width: 50%; */
+} 
 
+@media screen
+and (min-device-width: 581px)
+and (max-device-width: 1024px)
+and (-webkit-min-device-pixel-ratio: 2) {
+} 
+.trailer {
+    overflow:hidden;
+    padding-bottom:300px; /* Adecua este valor para controlar la altura del video */
+    position:relative;
+    height:0;
+}
+.trailer iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
 main-avances {
     display: grid;
     grid-gap: 100px;
@@ -116,12 +144,38 @@ main-avances {
     grid-template: repeat(4, 330px) / repeat(3, 1fr);
     justify-items: stretch;
 }
+article{
+    font-size: 1em;
+    text-align:left;
+    font-family: 'Acme', sans-serif;
+}
+/*main article trailerArticulo{
+}
+    overflow:hidden;
+    padding-bottom:300px;  
+    position:;
+    height:0;
+    align-items:center;
+
+}
+.trailerArticulo iframe{
+    left:0;
+    top:0;
+    position:center;}*/
+main article img{
+    padding: 5px;
+    width: 150px;
+    height:50%;
+    width:50%;
+}
 
 main-avances div {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(9,167,109);
+    flex: 1 1 auto;
+  
 }
 
 #Novedades {
