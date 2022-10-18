@@ -162,6 +162,7 @@ article{
     left:0;
     top:0;
     position:center;}*/
+
 main article img{
     padding: 5px;
     width: 150px;
@@ -195,7 +196,15 @@ main-avances div {
     min-height: 50 px;
     margin: 0.5rem;
     text-align: center;
+    flex-wrap: wrap;
 }
+img{
+    height: auto;
+    width: auto;
+    max-height: 280px;
+    max-width:  280px;
+}
+
 
 #Titulo_frase {
     text-align: center;
@@ -332,3 +341,11 @@ main-avances div {
 }
 
 /* Fin formato de íconos del footer */
+
+/* RESPONSIVE */
+@media (max-width: 1024px){
+.container__header,
+main{
+    padding: 20px;
+}
+}
