@@ -77,9 +77,10 @@ nav ul li {
 @media (max-width: 992px) {
 
     /*Agregar en body y resto*/
-    header {
+    header, body {
         flex-direction: column;
     }
+ 
 }
 
 @media (max-width: 768px) {
@@ -89,14 +90,16 @@ nav ul li {
         width: 90px;
         height: auto;
     }
+    
 }
 
 @media (max-width: 576px) {
 
     /*Agregar en body y resto*/
-    header {
+    header, body {
         flex-direction: row;
     }
+ 
 
     .custom-btn.btn-5 {
         width: 90%;
@@ -122,6 +125,8 @@ nav ul li {
         display: block;
         margin: 50px 0;
         line-height: 30px;
+    
+
     }
 
     nav ul li a {
@@ -132,6 +137,7 @@ nav ul li {
     li a.active {
         background: none;
         color: black;
+        
     }
 
     #check:checked~ul {
@@ -196,18 +202,19 @@ main {
     min-height: 100px;
 }
 
-@media screen and (max-device-width: 580px) and (-webkit-min-device-pixel-ratio: 2) {
-    /*  se podria hacer modificaciones aca
+/*@media screen and (max-device-width: 580px) and (-webkit-min-device-pixel-ratio: 2) {
+      se podria hacer modificaciones aca
 .content .pelicula .poster {
-    width: 50%; */
-}
+    width: 50%; }*/
 
-@media screen and (min-device-width: 581px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {}
+
+/*@media screen and (min-device-width: 581px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {}*/
 
 .trailer {
+    z-index: -1;
     overflow: hidden;
     padding-bottom: 300px;
-    /* Adecua este valor para controlar la altura del video */
+    /* este valor para controlar la altura del video */
     position: relative;
     height: 0;
 }
@@ -232,21 +239,22 @@ article {
     font-size: 1em;
     text-align: left;
     font-family: 'Acme', sans-serif;
+    
 }
 
-/*main article trailerArticulo{
-}
+.trailerArticulo{
+
     overflow:hidden;
     padding-bottom:300px;  
-    position:;
+    /*position:;*/
     height:0;
     align-items:center;
-
 }
 .trailerArticulo iframe{
     left:0;
     top:0;
-    position:center;}*/
+    
+    position:center;}
 
 main article img{
     padding: 5px;
@@ -282,7 +290,7 @@ main-avances div {
     text-align: center;
     flex-wrap: wrap;
 }
-img{
+.ImagenIndex{
     height: auto;
     width: auto;
     max-height: 280px;
@@ -294,6 +302,7 @@ img{
     text-align: center;
     padding: 10px 2px;
 }
+/* Inicio formato botonos */
 
 .custom-btn {
     width: 130px;
@@ -358,7 +367,7 @@ img{
     width: 100%;
     transition: 800ms ease all;
 }
-
+/* fin formato botones */
 /* Inicio formato de íconos del footer */
 
 :root {

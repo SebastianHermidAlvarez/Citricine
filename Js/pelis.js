@@ -1,4 +1,5 @@
 let pagina = 1;
+let categoria = "top_rated";
 const btnAnterior = document.getElementById('btnAnterior');  /* la declaracion de botones se repite codigo */ 
 const btnSiguiente = document.getElementById('btnSiguiente');
 const btnAnteriorInferior = document.getElementById('btnAnteriorInferior');
@@ -35,7 +36,7 @@ btnAnteriorInferior.addEventListener('click', () => {
 
 const cargarPeliculas = async() => {
 	try {
-		const respuesta = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=b7f9be5d7d8dea1d2870b3eda0c2cc8c&language=es-MX&page=${pagina}`);
+		const respuesta = await fetch(`https://api.themoviedb.org/3/movie/${categoria}?api_key=b7f9be5d7d8dea1d2870b3eda0c2cc8c&language=es-MX&page=${pagina}`);
 		/* La api es tomada  de  https://developers.themoviedb.org/ y la key es b7f9be5d7d8dea1d2870b3eda0c2cc8c */
 		console.log(respuesta);
 
@@ -47,7 +48,7 @@ const cargarPeliculas = async() => {
 				peliculas += `
 					<div class="pelicula">
 					<h3 class="titulo">${pelicula.title}</h3>	
-					<img class="poster" src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}">
+					<img class="poster" src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt="${pelicula.title}">
 					<h3> <br> </h3>
 					</div>
 				`;
