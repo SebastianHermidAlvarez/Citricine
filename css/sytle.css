@@ -125,8 +125,6 @@ nav ul li {
         display: block;
         margin: 50px 0;
         line-height: 30px;
-    
-
     }
 
     nav ul li a {
@@ -323,7 +321,14 @@ main-avances div {
     outline: none;
 }
 
-.btn-5 {
+.btn-4 {
+    z-index: -1;
+}
+.btn-5{
+z-index:1;
+}    
+
+.btn-5,.btn-4 {
     width: 130px;
     height: 40px;
     line-height: 42px;
@@ -333,14 +338,14 @@ main-avances div {
     background: linear-gradient(40deg, rgb(250, 198, 0) 85%, rgb(2, 144, 93) 15%);
 }
 
-.btn-5:hover {
+.btn-5:hover,.btn-4:hover  {
     color: rgb(251, 75, 2);
     background: transparent;
     box-shadow: none;
 }
 
 .btn-5:before,
-.btn-5:after {
+.btn-5:after,.btn-4:before,.btn-4:after {
     content: '';
     position: absolute;
     background: rgb(251, 75, 2);
@@ -355,7 +360,7 @@ main-avances div {
     transition: 400ms ease all;
 }
 
-.btn-5:after {
+.btn-5:after,.btn-4:after {
     right: inherit;
     top: inherit;
     left: 0;
@@ -363,7 +368,8 @@ main-avances div {
 }
 
 .btn-5:hover:before,
-.btn-5:hover:after {
+.btn-5:hover:after,.btn-4:hover:before,
+.btn-4:hover:after {
     width: 100%;
     transition: 800ms ease all;
 }
