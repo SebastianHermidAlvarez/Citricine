@@ -31,47 +31,46 @@
             </ul>
         </nav>
     </header>
+    <main>
     <H1>Debe registrarse</H1>
-    <div class="formulario">
-        <form name="fvalida">
-            <label for="">Nombre: </label>
-            <input type="text" name="nombre" placeholder="Ingrese aqui nombre">
-            <br><br>
-            <label for="">Apellido: </label>
-            <input type="text" name="apellido"placeholder="Ingrese aqui apellido">
-            <br> <br>
-            <label for="">E-mail:</label>
-            <input type="text" name="email"placeholder="Ingrese aqui su correo">
-            <br> <br>
-            <label for="">Edad:</label>
-
-            <input type="text" name="edad" size="3" maxlength="3"placeholder="años">
-            <h6>Tiene que ser mayor de 18 años</h6>
-            <br>
-            <label for="">Categorias Favoritas:</label>
-            <select name=interes>
-                <option value="Elegir">Todas
-                <option value="CienciaFiccion">Ciencia Ficcion
-                <option value="Drama">Drama
-                <option value="Comedia">Comedia
-                <option value="Infantil">Infantil
-                <option value="Terror">Terror
-                <option value="Accion">Accion
-                <option value="Documental">Documental
-                <option value="thriller">thriller
-                <option value="Otras">Otras
-
-            </select>
-            <br><br>
-            <input type="checkbox" name="terminos">Acepto los terminos y Condiciones>
-
-            <div>
-                <button class="custom-btn btn-4" onclick="validarEnviar()">Enviar</button>
-                <h1><br></h1>
-            </div>
-        </form>
-    </div>
-    <hr><br>
+            <div class="formulario">
+            <form name="fvalida">
+                <label for="">Nombre: </label>
+                <input type="text" name="nombre" placeholder="Ingrese aqui nombre">
+                <br><br>
+                <label for="">Apellido: </label>
+                <input type="text" name="apellido"placeholder="Ingrese aqui apellido">
+                <br> <br>
+                <label for="">E-mail:</label>
+                <input type="text" name="email"placeholder="Ingrese aqui su correo">
+                <br> <br>
+                <label for="">Edad:</label>
+                <input type="text" name="edad" size="3" maxlength="3"placeholder="años">
+                <h6>Tiene que ser mayor de 18 años</h6>
+                <br>
+                <label for="">Categorias Favoritas:</label>
+                <select name=interes>
+                    <option value="Elegir">Todas
+                    <option value="CienciaFiccion">Ciencia Ficcion
+                    <option value="Drama">Drama
+                    <option value="Comedia">Comedia
+                    <option value="Infantil">Infantil
+                    <option value="Terror">Terror
+                    <option value="Accion">Accion
+                    <option value="Documental">Documental
+                    <option value="thriller">thriller
+                    <option value="Otras">Otras
+                </select>
+                <br><br>
+                <input type="checkbox" name="terminos">Acepto los terminos y Condiciones>
+                <div>
+                    <button class="custom-btn btn-4" onclick="validarEnviar()">Enviar</button>
+                    <h6><br></h6>
+                </div>
+            </form>
+        </div>
+    </main>
+    
             <!--Hay demasiados if deberia mejorar con un par de  OR ||, pero no veo como poner el focus independiente -->
 
     <script>
@@ -140,7 +139,7 @@
         }
     </script>
     <footer>
-        <h3>Seguinos en nuestras redes sociales y enterate de las últimas novedades:</h3>  
+        <br><hr><br><h3>Seguinos en nuestras redes sociales y enterate de las últimas novedades:</h3>  
         <div  class="redes-container">
             <ul>
                 <li><a href="https://www.facebook.com/" class="facebook" target="_blank"><i

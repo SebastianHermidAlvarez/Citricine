@@ -19,6 +19,7 @@ h1 {
 
 h2 {
     font-size: 2.7em;
+    padding: 0.1em;
 }
 
 h3 {
@@ -40,6 +41,7 @@ header {
     align-items: center;
     background: white;
     padding: 10px;
+    width: 100%;
     /* Fuentes para encabezado */
     /* font-family: 'Bungee Shade', cursive; */
     /* font-family: 'Bungee Spice', cursive; */
@@ -86,27 +88,30 @@ nav ul li {
 
 @media (max-width: 768px) {
 
-    /*Agregar en body y resto*/
     .custom-btn.btn-5 {
         width: 90px;
         height: auto;
     }
+
     .grid_container {
         display: grid;
-        grid-template-columns:auto auto;
-        margin:1px;
+        grid-template-columns: auto auto;
+        margin: 1px;
     }
 
 }
 
 @media (max-width: 576px) {
 
-    /*Agregar en body y resto*/
-    header,
-    body {
+    header {
         flex-direction: row;
+        z-index: 1;
+        position: fixed;
     }
 
+    main {
+        padding-top: 5rem;
+    }
 
     .custom-btn.btn-5 {
         width: 90%;
@@ -123,7 +128,7 @@ nav ul li {
         height: 100vh;
         background: white;
         /*rgb(250, 198, 0) */
-        top: 100px;
+        top: 80px;
         left: 100%;
         text-align: center;
         transition: all .5s;
@@ -152,12 +157,16 @@ nav ul li {
 
     .grid_container {
         display: grid;
-        grid-template-columns:auto ;
-        margin:1px;
+        grid-template-columns: auto;
+        margin: 1px;
     }
 
+    html,
+    body {
+        overflow-x: hidden;
+        height: 100%;
+    }
 }
-
 
 .content {
     width: 90%;
@@ -201,29 +210,15 @@ body {
     /* font-family: 'Passion One', cursive; */
 }
 
-body,
-header,
 main,
 footer {
-    border: 2px red solid;
+    border: 2px;
     min-height: 50px;
     margin: 0.5rem;
     min-width: 300px;
 }
 
-main {
-    min-height: 100px;
-}
-
-/*@media screen and (max-device-width: 580px) and (-webkit-min-device-pixel-ratio: 2) {
-      se podria hacer modificaciones aca
-.content .pelicula .poster {
-    width: 50%; }*/
-
-
-/*@media screen and (min-device-width: 581px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {}*/
-
-.trailer { 
+.trailer {
     overflow: hidden;
     padding-bottom: 300px;
     /* este valor para controlar la altura del video */
@@ -285,8 +280,16 @@ main-avances div {
     flex: 1 1 auto;
 }
 
+.paginacion {
+    padding-top:10px;
+    text-align: center;
+}
+
+.formulario {
+    margin-left: 15px;
+}
+
 #Novedades {
-    border: 2px green solid;
     min-height: 50 px;
     margin: 0.5rem;
 }
@@ -399,6 +402,7 @@ main-avances div {
     transition: 800ms ease all;
 }
 
+
 /* fin formato botones */
 /* Inicio formato de íconos del footer */
 
@@ -468,11 +472,11 @@ main-avances div {
 
 /* Fin formato de íconos del footer */
 
-/* RESPONSIVE */
+/* RESPONSIVE
 @media (max-width: 1024px) {
 
     .container__header,
     main {
         padding: 20px;
     }
-}
+} */
