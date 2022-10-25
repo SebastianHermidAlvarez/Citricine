@@ -166,6 +166,12 @@ nav ul li {
         overflow-x: hidden;
         height: 100%;
     }
+    .content {
+        grid-template-columns: repeat(3, 1fr)!important;
+
+    }
+    
+ 
 }
 
 .content {
